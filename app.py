@@ -11,34 +11,29 @@ def skill():
         "template": {
             "outputs": [
                 {
-                    "basicCard":{
-                        "title": "카드의 제목",
-                        "description": "상세 설명",
-                        "thumbnail": {
-                            "imageUrl": "https://t1.daumcdn.net/friends/www/talk/kakaofriends_talk_2018.png",
-                            "link": {
-                                "mobile": "https://naver.com",
-                                "android": "https://google.com",
-                                "web": "https://daum.net",
-                                "pc": "https://github.com"
-                                }
-                            },
-                        "buttons": [
-                            {
-                                "label": "010-0000-0000에 전화걸기",
-                                "action": "phone",
-                                "phoneNumber": "010-0000-0000"
-                            },
-                            {
-                                "label": "공유하기",
-                                "action": "share"
-                            }
-                           
-                        ]
+                    "simpleText": {
+                        "text": "아래 노란버튼이 퀵리플라이!"
                     }
                 }
+            ],
+            "quickReplies": [
+                {
+                    "label": "퀵리플라이1",
+                    "action": "message",
+                    "messageText": "퀵리플라이1 응답메세지"
+                },
+                {
+                    "label": "퀵리플라이2",
+                    "action": "message",
+                    "messageText": "퀵리플라이2 응답메세지"
+                },
+                {
+                    "label": "퀵리플라이3",
+                    "action": "message",
+                    "messageText": "퀵리플라이3 응답메세지"
+                }
             ]
-        }   
+        }
     }
 
     return jsonify(data)
